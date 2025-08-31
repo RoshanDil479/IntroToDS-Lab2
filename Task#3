@@ -1,0 +1,7 @@
+mixedTuple = ("Roshan", 4.0, 3, "TeaPot", 3.55,(45, 60 ,90), 60)
+print(mixedTuple[1])
+print(mixedTuple[:-3])
+print(mixedTuple.count("TeaPot"))
+print(mixedTuple.index(2.0))
+print(mixedTuple[3][5])
+mixedTuple[0] = "Titanic" #error generated bcaus of this
