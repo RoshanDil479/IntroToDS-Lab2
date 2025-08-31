@@ -1,0 +1,54 @@
+from pathlib import Path
+import pandas as pd
+
+fname = Path("students.txt")
+csvfile = Path("students.csv")
+
+print("\n[CREATE]")
+with open(fname, "w", encoding="utf-8") as f:
+    f.write("101,Ali,85\n102,Sara,90\n103,Ahmed,78\n")
+print("Created", fname)
+
+print("\n[READ - full]")
+with open(fname, "r", encoding="utf-8") as f:
+    print(f.read(), end="")
+
+print("\n[READ - line by line]")
+with open(fname, "r", encoding="utf-8") as f:
+    for i, line in enumerate(f, start=1):
+        print("Line", i, ":", line.strip())
+
+print("\n[UPDATE]")
+with open(fname, "a", encoding="utf-8") as f:
+    f.write("104,Ayesha,88\n")
+print("Added one record")
+
+print("\n[DELETE]")
+with open(fname, "r", encoding="utf-8") as f:
+    lines = f.readlines()
+with open(fname, "w", encoding="utf-8") as f:
+    for line in lines:
+        if not line.startswith("102,"):
+            f.write(line)
+print("Deleted roll 102")
+
+print("\n[EXPORT TO CSV]")
+with open(fname, "r", encoding="utf-8") as f:
+    lines = f.readlines()
+with open(csvfile, "w", encoding="utf-8") as f:
+    f.write("Roll,Name,Marks\n")
+    for line in lines:
+        f.write(line)
+print("Exported to", csvfile)
+
+print("\n[IMPORT CSV WITH PANDAS]")
+df = pd.read_csv(csvfile)
+print(df)
+
+print("\n[DATASET INFO]")
+print("Shape:", df.shape)
+print("Columns:", df.columns)
+print("Dtypes:\n", df.dtypes)
+print("\nFirst 10 rows:\n", df.head(10))
+print("\nLast 5 rows:\n", df.tail())
+print("\nMissing values:\n", df.isnull().sum())
