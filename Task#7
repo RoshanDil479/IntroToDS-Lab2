@@ -1,0 +1,5 @@
+tuples = [(1, "jane"), (2, "Bob"), (4, "dan")]
+print("Sorted by roll number:", sorted(tuples))
+print ("Sorted by name: ", sorted(tuples, key = lambda x: x[1]))
+marks = {"Sara" : 66, "Zara" : 89, "Tara" : 78}
+print("Sorted by marks: " ,sorted(marks.items(), key=lambda x:x[1]))
