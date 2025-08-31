@@ -1,0 +1,18 @@
+studentRecord = {
+    20: {"Name" : "Roshan", "Marks" : 35},
+    21:{"Name" : "Wamiza" , "Marks" : 10},
+    22:{"Name" : "Aliya", "Marks": 76}
+}
+studentRecord.update({
+    31: {"Name" : "farwa", "Marks" : 54},
+    32: {"Name" : "Rehsn" , "Marks" : 40}
+})
+print(studentRecord.get(10))
+print(studentRecord.get(33))
+print(studentRecord.get(33, "not found"))
+
+print(studentRecord.pop(76))
+print(studentRecord.popitem())
+
+dictionary = {x: x**2 for x in range(1, 5)}
+print(dictionary)
