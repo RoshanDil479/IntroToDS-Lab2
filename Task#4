@@ -1,0 +1,33 @@
+A = {"AI", "ML", "DS"}
+B = {"ML", "NLP", "CV"}
+
+print("Union: ", A.union(B))
+print("Intersection: ", A.intersection(B))
+print("Difference: ", A.difference(B))
+print("Differnce: ", B.difference(A))
+print("Symmetric Difference: ", A.symmetric_difference(B))
+
+A.add("IDS")
+print(A)
+
+A.discard("DS")
+A.discard("SEE")  # if not present, nothing happens
+
+A.remove("AI")
+# A.remove("SE")  # gives an error if the element is missing
+
+print(A)
+
+if "AI" in A:
+  print("AI exists in set")
+else:
+  print("AI does not exist")
+------------Output-------------
+Union:  {'ML', 'DS', 'CV', 'AI', 'NLP'}
+Intersection:  {'ML'}
+Difference:  {'DS', 'AI'}
+Differnce:  {'CV', 'NLP'}
+Symmetric Difference:  {'CV', 'AI', 'DS', 'NLP'}
+{'ML', 'DS', 'IDS', 'AI'}
+{'ML', 'IDS'}
+AI does not exist
