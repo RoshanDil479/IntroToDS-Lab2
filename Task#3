@@ -2,6 +2,21 @@ mixedTuple = ("Roshan", 4.0, 3, "TeaPot", 3.55,(45, 60 ,90), 60)
 print(mixedTuple[1])
 print(mixedTuple[:-3])
 print(mixedTuple.count("TeaPot"))
-print(mixedTuple.index(2.0))
+print(mixedTuple.index(4.0))
 print(mixedTuple[3][5])
 mixedTuple[0] = "Titanic" #error generated bcaus of this
+------------Output-------------
+4.0
+('Roshan', 4.0, 3, 'TeaPot')
+1
+1
+t
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+/tmp/ipython-input-1223764904.py in <cell line: 0>()
+      5 print(mixedTuple.index(4.0))
+      6 print(mixedTuple[3][5])
+----> 7 mixedTuple[0] = "Titanic" #error generated bcaus of this
+      8 
+
+TypeError: 'tuple' object does not support item assignment
