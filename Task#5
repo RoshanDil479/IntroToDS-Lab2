@@ -1,0 +1,11 @@
+dictionary = {"24k-6666": "abcd", "24K-7373": "Rteeyey", "24K-8888: "ooppo", "24k-9999" : "ueueyey", "24K-3000" : "iiii"}
+dictionary["24K-3636"] = "fypt"
+print(dictionary)
+print(dictionary["24K-6666"])
+dictionary["24K-7676"] = "eggf"
+print(dictionary)
+del dictionary["24k-7878"]
+print(dictionary)
+print("Keys: ", list(dictionary.keys()))
+print("Values: ", list(dictionary.values()))
+print("Items: ", list(dictionary.items()))
