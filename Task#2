@@ -1,0 +1,10 @@
+ist1=['roshan','amna','mirha','aiza','fatima','naina','umaima','wamiza','samia','pari']
+list1.append('xyz')
+list1.insert(4,'abc')
+print(list1)
+list1[2]="fiza"
+list1.remove('roshan')
+list1.pop(7)
+print(list1[4])
+print(list1[-1])
+list1[:5]
