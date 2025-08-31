@@ -1,0 +1,34 @@
+import pandas as pd
+
+try:
+    df_csv = pd.read_csv("data.csv")
+    print("csv Shape:", df_csv.shape)
+    print("DATA Types:", df_csv.dtypes)
+    print("\ncsv Columns:", df_csv.columns.tolist())
+    print("\nlast 5 rows:\n", df_csv.tail())
+    print("\nfirst 10 rows:\n", df_csv.head(10))
+    print("Missing Values:\n", df_csv.isnull().sum())
+except FileNotFoundError:
+    print("CSV file not found, Place 'data.csv' in the working directory")
+
+try:
+    df_json = pd.read_json("data.json")
+    print("json Shape:", df_json.shape)
+    print("DATA Types:", df_json.dtypes)
+    print("\njson Columns:", df_json.columns.tolist())
+    print("\nlast 5 rows:\n", df_json.tail())
+    print("\nfirst 10 rows:\n", df_json.head(10))
+    print("Missing Values:\n", df_json.isnull().sum())
+except FileNotFoundError:
+    print("JSON file not found, Place 'data.json' in the working directory")
+
+try:
+    df_xlsx = pd.read_excel("data.xlsx")
+    print("xlsx Shape:", df_xlsx.shape)
+    print("DATA Types:", df_xlsx.dtypes)
+    print("\nxlsx Columns:", df_xlsx.columns.tolist())
+    print("\nlast 5 rows:\n", df_xlsx.tail())
+    print("\nfirst 10 rows:\n", df_xlsx.head(10))
+    print("Missing Values:\n", df_xlsx.isnull().sum())
+except FileNotFoundError:
+    print("XLSX file not found, Place 'data.xlsx' in the working directory")
